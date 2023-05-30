@@ -53,10 +53,16 @@ const createDivs = (val) => {
   }
 };
 
+container.addEventListener("mouseover", (e) => {
+    if(e.target.classList.contains("column")) {
+        e.target.style.backgroundColor = "black";
+    }
+});
+
 const clearContent = () => { //Resets all the values of all the required elements to avoid overlapping
     size.value =""; //resets the text fields value
     document.querySelector(".default-value").style.cssText = "display: none;";
     while(container.firstChild){
         container.firstChild.remove();
     }
-}
+};
