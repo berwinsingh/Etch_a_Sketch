@@ -37,7 +37,7 @@ btn.addEventListener("click", () => {
 });
 
 const createDivs = (val) => {
-    container.style.cssText = "display:block;"
+    container.style.cssText = "display: block;";
   for (let i = 0; i < val; i++) {
     const row = document.createElement("div");
     row.classList.add("flex");
@@ -53,7 +53,7 @@ const createDivs = (val) => {
   }
 };
 
-const clearContent = () => {
+const clearContent = () => { //Resets all the values of all the required elements to avoid overlapping
     size.value =""; //resets the text fields value
     document.querySelector(".default-value").style.cssText = "display: none;";
     while(container.firstChild){
